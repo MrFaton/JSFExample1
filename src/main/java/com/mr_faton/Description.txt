@@ -1,0 +1,3 @@
+1. For the first test you must to enter on url: http://localhost:8080/test1/static-switch-demo.xhtml
+At this page you can see two buttons. Every button is open different page. But button isn't has a direct
+link to another page. It's possible thought "action" and "action catchers" in faces-config.xml
