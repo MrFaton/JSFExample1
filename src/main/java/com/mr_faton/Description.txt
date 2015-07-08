@@ -1,3 +1,21 @@
 1. For the first test you must to enter on url: http://localhost:8080/test1/static-switch-demo.xhtml
 At this page you can see two buttons. Every button is open different page. But button isn't has a direct
 link to another page. It's possible thought "action" and "action catchers" in faces-config.xml
+
+2. The second test. The url of the second test is: http://localhost:8080/test2/number-switch-demo.xhtml
+At this page we can see a text field and a button. The meaning of example is show how we can use
+"if" operator in "navigation-rule" in faces-config.xml. If we input number that less then 100 browser
+will show one page, if number is greater then 100 browser will render another page
+
+3. The third test. URL: http://localhost:8080/test3/action-switch-demo.xhtml
+This example shows dynamic "action" change. When "action" depends from a bean.
+In this example "action" takes value from a bean's method. Logic: the user is input string,
+appropriate bean takes the length of this string and calculate remainder of the division on 3. And
+then in dependence of the reminder the bean's method "nextPage" decide what string (what page) it must
+to return. So that how dynamic action is.
+
+4. The fourth example. URL: http://localhost:8080/test4/color-switcher-demo.xhtml
+This example is demonstrated program access to uicomponents on user's browser page. As we can see, we
+can change components (add/remove or change style/color or change value) of any component in a page.
+In this example we never touch html code... The components configure only because JSF helps us to do it.
+JSF realised on silly html code difficult model with program configurable components
