@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head></h:head>
+<h:body>
+    <h:form>
+        <h:outputLabel value="click on field:"/>
+        <h:inputText>
+            <f:ajax render="outputMessageField" event="click" listener="#{ajaxBeanB.handleEvent}"/>
+        </h:inputText>
+        <br/>
+
+        <h:outputLabel value="click on button:"/>
+        <h:commandButton label="click on button" value="click me">
+            <f:ajax render="outputMessageField" listener="#{ajaxBeanB.handleEvent}"/>
+        </h:commandButton>
+        <br/>
+
+        <h:outputLabel value="position mouse on field:"/>
+        <h:inputText>
+            <f:ajax render="outputMessageField" event="mouseover" listener="#{ajaxBeanB.handleEvent}"/>
+        </h:inputText>
+        <br/>
+
+        <h:outputText id="outputMessageField" value="#{ajaxBeanB.message}"/>
+    </h:form>
+</h:body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<!--We must to create a "head" tag, becauce its uses for some javascript code-->
+<h:head></h:head>
+<body>
+<h:form style="border: dotted">
+    <h:outputLabel>Input your name</h:outputLabel>
+    <h:inputText id="nameInput" value="#{ajaxBeanA.fieldValue}" required="true">
+        <f:validateLength minimum="3" maximum="25"/>
+    </h:inputText>
+    <h:message for="nameInput" style="color: red; border: dotted"/>
+    <br/>
+    <h:commandButton value="Greeting">
+        <f:ajax execute="nameInput" render="outputGreeting"/>
+    </h:commandButton>
+    <br/>
+    <!-- For access to the method of the bean, the method must starts with "get"-->
+    <h:outputText id="outputGreeting" value="#{ajaxBeanA.message}"/>
+</h:form>
+</body>
+</html>

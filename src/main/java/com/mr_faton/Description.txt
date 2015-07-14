@@ -19,3 +19,20 @@ This example is demonstrated program access to uicomponents on user's browser pa
 can change components (add/remove or change style/color or change value) of any component in a page.
 In this example we never touch html code... The components configure only because JSF helps us to do it.
 JSF realised on silly html code difficult model with program configurable components
+
+5. Five test url is: http://localhost:8080/test5/ajax-example1.xhtml.
+This test is about AJAX. When user input it's name and press the button, user will see some little greeting
+under the for. But page don't reload, page is reconstruct its changed part.
+In xhtml-page:
+execute - what field do we need to send
+render - where we must to render the answer
+
+6. The six's example url is: http://localhost:8080/test6/ajax-example2-onlisteners.xhtml.
+This example is built on ajax listeners mechanism. This example demonstrate a page with three elements on it.
+First elem - input text field. Listener executes when mouse click on field
+Second elem - button. Listener executes when click on button
+Third ele - input text field. Most interesting. Listener executes when mouse cursor is over the field! Just over
+the field!
+
+7. URL: http://localhost:8080/test7/fly-weight-converter.xhtml
+Using AJAX we have a small temperature converter.

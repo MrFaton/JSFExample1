@@ -13,7 +13,7 @@
             Input any string to know the remaind of the division on 3 (string example: dsafas)
         </h:outputLabel>
         <p/>
-        <h:inputText id="textIn" value="#{actionSwitcherBean.line}" rendered="true">
+        <h:inputText id="textIn" value="#{actionSwitcherBean.line}" required="true">
             <f:validateLength minimum="1"/>
         </h:inputText>
         <h:message for="textIn" style="color: red; border-style: double"/>

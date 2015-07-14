@@ -15,7 +15,7 @@
             you will see another page)
         </h:outputLabel>
         <p/>
-        <h:inputText id="textIn" value="#{valueHolder.value}" rendered="true">
+        <h:inputText id="textIn" value="#{valueHolder.value}" required="true">
             <f:validateLength minimum="1"/>
             <f:convertNumber integerOnly="true"/>
         </h:inputText>

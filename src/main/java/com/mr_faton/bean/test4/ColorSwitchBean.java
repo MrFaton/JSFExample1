@@ -1,4 +1,4 @@
-package com.mr_faton.bean;
+package com.mr_faton.bean.test4;
 
 import javax.faces.application.Application;
 import javax.faces.bean.ApplicationScoped;

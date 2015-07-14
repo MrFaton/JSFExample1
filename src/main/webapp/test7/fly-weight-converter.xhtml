@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head></h:head>
+<h:body>
+    <h1>The fly weight converter!</h1>
+    <h:form>
+        <fieldset>
+            <legend>On the fly converter...</legend>
+            <h:outputLabel value="Temperature in Celcius = "/>
+            <h:inputText id="inputTemperature" value="#{flyTemperatureConverter.c}" validator="temperatureValidator">
+                <!-- TODO validator doesn't work-->
+                <!--<f:validator validatorId="temperatureValidator"/>-->
+                <f:ajax event="keyup" execute="@this" render="tK tF inputTemparatureMessager"/>
+            </h:inputText>
+            <h:message id="inputTemparatureMessager" for="inputTemperature" style="color: red"/>
+            <br/>
+            <h2><h:outputText id="tK" value="Temperature in Kelvin = #{flyTemperatureConverter.inKelvin}"/></h2>
+            <h2><h:outputText id="tF" value="Temperature in Fahrenheit = #{flyTemperatureConverter.inFahrenheit}"/></h2>
+        </fieldset>
+    </h:form>
+</h:body>
+</html>

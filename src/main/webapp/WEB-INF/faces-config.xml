@@ -38,7 +38,7 @@
     <!-- I can declare all beans here without any annotations-->
     <!--<managed-bean>-->
         <!--<managed-bean-name>valueHolder</managed-bean-name>-->
-        <!--<managed-bean-class>com.mr_faton.bean.ValueHolderBean</managed-bean-class>-->
+        <!--<managed-bean-class>com.mr_faton.bean.test2.ValueHolderBean</managed-bean-class>-->
         <!--<managed-bean-scope>request</managed-bean-scope>-->
     <!--</managed-bean>-->
   

@@ -1,4 +1,4 @@
-package com.mr_faton.bean;
+package com.mr_faton.bean.test3;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
